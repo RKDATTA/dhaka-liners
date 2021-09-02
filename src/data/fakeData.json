@@ -1,0 +1,26 @@
+[
+    {
+        "key": "Bike",
+        "img": "https://i.ibb.co/1nQMDJ6/Frame.png",
+        "seat": "4",
+        "charge": "$30"
+    },
+    {
+        "key": "Car",
+        "img": "https://i.ibb.co/2j4j20H/Frame-2.png",
+        "seat": "4",
+        "charge": "$50"
+    },
+    {
+        "key": "Bus",
+        "img": "https://i.ibb.co/HDsDzgV/Frame-1.png",
+        "seat": "4",
+        "charge": "$10"
+    },
+    {
+        "key": "Train",
+        "img": "https://i.ibb.co/6mqNYb4/Group.png",
+        "seat": "4",
+        "charge": "$20"
+    }
+]
