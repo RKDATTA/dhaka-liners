@@ -107,6 +107,10 @@ const SignUp = () => {
                             <input type="text" className="form-control" name="name" ref={register({ required: true })} />
                             {errors.name && <span className="text-danger">Name is required</span>}
                         </Form.Group>
+                            
+                    </Form.Row>
+
+                    <Form.Row>
 
                         <Form.Group as={Col} controlId="formGridPassword">
                             <Form.Label>Email</Form.Label>
@@ -114,12 +118,19 @@ const SignUp = () => {
                             {errors.email && <span className="text-danger">Email is required</span>}
                         </Form.Group>
                     </Form.Row>
+                    
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Password * <span id="passwordType"></span></Form.Label>
                             <input type="password" className="form-control" id="password" name="password" ref={register({ required: true })} onChange={checkPassword} onBlur={handelCheck} />
                             {errors.password && <span className="text-danger">Password is required</span>}
                         </Form.Group>
+
+                        
+                    </Form.Row>
+
+                    <Form.Row>
+                    
 
                         <Form.Group as={Col} controlId="formGridPassword">
                             <Form.Label>Confirm Password * <span id="matchPassword"></span></Form.Label>
@@ -128,7 +139,8 @@ const SignUp = () => {
                         </Form.Group>
                     </Form.Row>
 
-                    <input className="btn btn-primary btn-lg btn-block" id="submit" variant="primary" type="submit" disabled />
+                    <div className="text-center"> <input className="btn btn-primary btn-lg" id="submit" variant="primary" type="submit" disabled/> </div>
+                    
                 </Form>
             </Container>
         </div>

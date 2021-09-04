@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import MapContainer from '../MapContainer/MapContainer';
 import man from '../../images/peopleicon.png';
 import { useParams } from 'react-router';
 import fakeData from '../../data/fakeData.json';
@@ -60,10 +59,6 @@ const RideDetail = () => {
                             </div>
                         </div>
                     </div>
-                </Col>
-
-                <Col xs={12} md={8}>
-                    <MapContainer></MapContainer>
                 </Col>
             </Row>
         </Container>

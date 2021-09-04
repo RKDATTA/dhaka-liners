@@ -1,25 +1,25 @@
 [
     {
         "key": "Bike",
-        "img": "https://i.ibb.co/1nQMDJ6/Frame.png",
-        "seat": "4",
+        "img": "https://i.ibb.co/hCQVC0b/bike-1.jpg",
+        "seat": "1",
         "charge": "$30"
     },
     {
         "key": "Car",
-        "img": "https://i.ibb.co/2j4j20H/Frame-2.png",
+        "img": "https://i.ibb.co/5jkmJJF/car-1.jpg",
         "seat": "4",
         "charge": "$50"
     },
     {
         "key": "Bus",
-        "img": "https://i.ibb.co/HDsDzgV/Frame-1.png",
+        "img": "https://i.ibb.co/4t2gzNL/bus-1.jpg",
         "seat": "4",
         "charge": "$10"
     },
     {
-        "key": "Train",
-        "img": "https://i.ibb.co/6mqNYb4/Group.png",
+        "key": "Metro",
+        "img": "https://i.ibb.co/WxM2Gk9/dhaka-metro-1.jpg",
         "seat": "4",
         "charge": "$20"
     }

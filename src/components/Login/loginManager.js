@@ -8,7 +8,6 @@ export const initializeLoginFrameWork = () => {
     };
 }
 
-
 export const handleGoogleSignIn = () => {
     const providerGoogle = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(providerGoogle)
@@ -27,26 +26,6 @@ export const handleGoogleSignIn = () => {
 }
 
 
-export const handleFacebookSignIn = () => {
-    const providerFacebook = new firebase.auth.FacebookAuthProvider();
-    return firebase
-        .auth()
-        .signInWithPopup(providerFacebook)
-        .then((result) => {
-            var credential = result.credential;
-            var user = result.user;
-            user.success = true;
-            var accessToken = credential.accessToken;
-            return user
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            var email = error.email;
-            var credential = error.credential;
-        });
-}
-
 
 export const handleSignOut = () => {
     return firebase.auth().signOut().then(() => {
@@ -58,7 +37,6 @@ export const handleSignOut = () => {
         }
         return signedOutUser;
     }).catch((error) => {
-        // An error happened.
     });
 }
 
@@ -67,7 +45,6 @@ export const handleSignOut = () => {
 export const createUserWithEmailAndPassword = (name, email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(userCredential => {
-            // Signed up
             const userInfo = userCredential.user;
             userInfo.error = '';
             userInfo.success = true;
@@ -111,11 +88,10 @@ const updateUserInfo = (name) => {
         displayName: name
     })
         .then(res => {
-            // Update successful.
-            console.log('Successfully updated');
+            console.log('User updated');
         })
         .catch(error => {
-            // An error happened.
+        
             console.log(error);
         });
 }

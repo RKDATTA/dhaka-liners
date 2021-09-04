@@ -5,9 +5,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Login.css'
 
-//Firebase
 import { createUserWithEmailAndPassword, handleFacebookSignIn, handleGoogleSignIn, handleSignOut, initializeLoginFrameWork, siginUserWithEmailAndPassword } from './loginManager';
-
 
 
 const Login = () => {
@@ -38,7 +36,6 @@ const Login = () => {
     }
 
 
-    // data validation
     const handelCheck = (e) => {
         let isFieldValid = true;
         if (e.target.name === 'email') {
@@ -47,7 +44,7 @@ const Login = () => {
         }
         else {
             const emailAlert = document.getElementById('email');
-            emailAlert.innerText = ' * Please enter a valid email';
+            emailAlert.innerText = ' * Pls enter a valid email';
             emailAlert.style.color = 'red';
         }
         if (e.target.name === 'password') {
@@ -57,7 +54,7 @@ const Login = () => {
         }
         else {
             const passAlert = document.getElementById('password');
-            passAlert.innerText = ' * Use minimum 7 character and at least 1 number';
+            passAlert.innerText = ' * Use minimum 7 digits and at least 1 number';
             passAlert.style.color = 'red';
         }
 
@@ -96,8 +93,8 @@ const Login = () => {
                 <Form onSubmit={handleSubmit}>
 
                     <Row className="my-3">
-                        <Col md={6}><Button className="btn btn-danger btn-lg btn-block my-2" onClick={googleSignIn}>Login with Google</Button></Col>
-                        <Col md={6}><Button className="btn btn-info btn-lg btn-block my-2"><Link to="/signup" style={{ textDecoration: 'none', color: '#fff' }}>Create an Account</Link></Button></Col>
+                        <Col md={6}><Button className="btn btn-danger btn-lg btn-block my-2" onClick={googleSignIn}>Login with Google</Button></Col> <br/>
+                        <Col md={6}><Button className="btn btn-info btn-lg btn-block my-2"><Link to="/signup" style={{ textDecoration: 'none', color: '#fff' }}>Login with Email</Link></Button></Col>
                     </Row>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridPassword">
@@ -105,6 +102,9 @@ const Login = () => {
                             <input type="email" className="form-control" name="email" ref={register({ required: true })} onBlur={handelCheck} />
                             {errors.email && <span className="text-danger">Email is required</span>}
                         </Form.Group>
+                    </Form.Row>
+
+                    <Form.Row>
 
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Password <span id="password">*</span></Form.Label>
@@ -113,7 +113,9 @@ const Login = () => {
                         </Form.Group>
                     </Form.Row>
 
-                    <input className="btn btn-primary btn-lg btn-block" variant="primary" type="submit" />
+                    <div className="text-center">
+                    <input className="btn btn-primary btn-lg mx-auto" variant="primary" type="submit" />
+                    </div>
                 </Form>
             </Container>
         </div>

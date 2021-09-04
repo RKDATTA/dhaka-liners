@@ -33,7 +33,7 @@ function App() {
           </PrivateRoute>
           <Route path="/blog">
           </Route>
-          <Route path="/contract">
+          <Route path="/contact">
           </Route>
           <Route path="/login">
             <Login />
