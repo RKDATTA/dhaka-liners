@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import fakeData from '../../data/fakeData.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStreetView, faMapPin } from '@fortawesome/free-solid-svg-icons'
+import mapimg from '../../images/Map.png'
 
 const RideDetail = () => {
 
@@ -59,6 +60,9 @@ const RideDetail = () => {
                             </div>
                         </div>
                     </div>
+                </Col>
+                <Col xs={12} md={8}>
+                <img className="img-fluid p-3" src={mapimg} alt="" />
                 </Col>
             </Row>
         </Container>
